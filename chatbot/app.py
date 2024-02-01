@@ -41,3 +41,6 @@ def handle_prompt():
     conversation_history.append(response)
 
     return response
+
+if __name__ == '__main__':
+    app.run()
