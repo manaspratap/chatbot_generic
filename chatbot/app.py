@@ -11,11 +11,9 @@ model = AutoModelForSeq2SeqLM.from_pretrained(model_name)
 tokenizer = AutoTokenizer.from_pretrained(model_name)
 conversation_history = []
 
-# New code ----------------------------------------------
 @app.route('/', methods=['GET'])
 def home():
     return render_template('index.html')
-# New code ----------------------------------------------
 
 @app.route('/chatbot', methods=['POST'])
 def handle_prompt():
